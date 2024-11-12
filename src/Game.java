@@ -37,14 +37,14 @@ public class Game{
         }
     }
 
-    public void oneUp(){
-        goal += 1;
+    public int oneUp(){
+        return 1;
     }
-    public void oneDown(){
-        goal -= 1;
+    public int oneDown(){
+        return 1;
     }
-    public void twoUp(){
-        goal += 2;
+    public int twoUp(){
+        return  2;
     }
     public void freeTwo(){
 
