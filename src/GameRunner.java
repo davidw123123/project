@@ -36,6 +36,7 @@ public class GameRunner {
                     }
                 } else {
                     System.out.println("You don't have this ability! Choose between hit or stand");
+                    response = s.nextLine();
                 }
         }
             if (response.equalsIgnoreCase(("hit"))) {
