@@ -44,9 +44,31 @@ public class Game{
 
     }
 
-//    public int determineWinner(int playerTotal, int computerTotal){
-//
-//    }
+    public String determineWinner(int playerTotal, int computerTotal, int goal){
+        String winner = "";
+        if (playerTotal == computerTotal) {
+            winner = "No winner!";
+        } else if (playerTotal > goal && computerTotal < goal){
+            winner = "You lose!";
+        } else if (computerTotal > goal && playerTotal < goal){
+            winner = "You win!";
+        } else if (playerTotal>goal&&computerTotal>goal){
+         int playerScore = goal - playerTotal;
+         int computerScore = goal - computerTotal;
+         if (playerTotal > computerScore)
+         {
+            winner = "You lose!";
+         }
+         else if (computerScore > playerScore) {
+             winner = "You win!";
+         }
+     } else if (goal - playerTotal < goal - computerTotal){
+         winner = "You win!";
+     } else {
+         winner = "You lose!";
+     }
+     return  winner;
+        }
     public String toString(){
         return abilites +" "+ deck + + goal;
     }
