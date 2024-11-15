@@ -1,5 +1,4 @@
 public class Game{
-    int goal = 21;
     String deck = "";
     int total = 0;
     String abilites = "";
@@ -31,19 +30,6 @@ public class Game{
         }
     }
 
-    public int oneUp(){
-        return 1;
-    }
-    public int oneDown(){
-        return 1;
-    }
-    public int twoUp(){
-        return  2;
-    }
-    public void freeTwo(){
-
-    }
-
     public String determineWinner(int playerTotal, int computerTotal, int goal){
         String winner = "";
         if (playerTotal == computerTotal) {
@@ -69,8 +55,5 @@ public class Game{
      }
      return  winner;
         }
-    public String toString(){
-        return abilites +" "+ deck + + goal;
-    }
 
 }

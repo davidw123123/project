@@ -7,7 +7,6 @@ public class tempGameRunner {
         Scanner s = new Scanner(System.in);
         tempGame user = new tempGame();
         tempGame computer = new tempGame();
-        tempGame goal = new tempGame(21);
         int computerInitial = computer.total;
         System.out.println("Your ability cards: " + user.abilites + "\n" + "Your number: " + user.deck+"\n"+"----------------------------------------------------");
         System.out.println(computer.abilites + " " + computer.deck);
@@ -18,6 +17,8 @@ public class tempGameRunner {
             if ((user.abilites.length()>1)&&(!response.equalsIgnoreCase("hit")&&!response.equalsIgnoreCase("stand"))){
                 if (response.equalsIgnoreCase(user.abilites)) {
                     System.out.println(user.useAbility(user.abilites));
+                    // change the computer goal to equal the player goal
+                    computer.changeGoal(user.getGoal());
                     } else {
                     System.out.println("You don't have this ability! Choose between hit or stand");
                     response = s.nextLine();
@@ -33,7 +34,7 @@ public class tempGameRunner {
                 System.out.println("Total: "+ user.total+"\n"+"----------------------------------------------------");
                 UserMove = false;
             }
-            if ((Math.abs(computer.total - goal) < 5)||(Math.abs(computer.total - goal) > goal)){
+            if ((Math.abs(computer.total - computer.goal) < 5)||(Math.abs(computer.total - computer.goal) > computer.goal)){
                 System.out.println("Computer's Turn: Stand");
                 System.out.println(computer.total+"\n"+"----------------------------------------------------");
                 computerMove = false;
@@ -48,6 +49,6 @@ public class tempGameRunner {
             }
         }
 
-        System.out.println("----------------------------------------------------"+"\n"+ user.determineWinner(user.total, computer.total,goal));
+        System.out.println("----------------------------------------------------"+"\n"+ user.determineWinner(user.total, computer.total,user.goal));
     }
 }

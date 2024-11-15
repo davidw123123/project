@@ -10,9 +10,6 @@ public class tempGame{
         deck += String.valueOf(temp);
         abilites += randomAbility();
     }
-    public tempGame(int goal){
-        this.goal = goal;
-    }
 
     public int goal(){
         int goal = 21;
@@ -42,6 +39,10 @@ public class tempGame{
         } else {
             return "sevenDown";
         }
+    }
+
+    public int getGoal() {
+        return goal;
     }
 
     public String useAbility(String ability){
@@ -74,6 +75,10 @@ public class tempGame{
     public void oneDown(){
         abilites = "";
         goal -= 1;
+    }
+
+    public void changeGoal(int newGoal) {
+        this.goal = newGoal;
     }
 
 
