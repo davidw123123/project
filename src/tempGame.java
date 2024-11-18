@@ -2,13 +2,13 @@ public class tempGame{
     int goal = 21;
     String deck = "";
     int total = 0;
-    String abilites = "";
+    String abilities = "";
 
     public tempGame(){
         int temp = ((int) (Math.random()*9+1));
         total += temp;
         deck += String.valueOf(temp);
-        abilites += randomAbility();
+        abilities += randomAbility();
     }
 
     public int goal(){
@@ -46,13 +46,13 @@ public class tempGame{
     }
 
     public String useAbility(String ability){
-        if (abilites.equalsIgnoreCase("oneUp")) {
+        if (abilities.equalsIgnoreCase("oneUp")) {
           oneUp();
             return "The goal is now " + goal+"\n"+"----------------------------------------------------";
-        } else if (abilites.equalsIgnoreCase("sevenUp")) {
+        } else if (abilities.equalsIgnoreCase("sevenUp")) {
            sevenUp();
             return "The goal is now " + goal+"\n"+"----------------------------------------------------";
-        } else if (abilites.equalsIgnoreCase("oneDown")) {
+        } else if (abilities.equalsIgnoreCase("oneDown")) {
             oneDown();
             return"The goal is now " + goal+"\n"+"----------------------------------------------------";
         } else {
@@ -61,19 +61,19 @@ public class tempGame{
         }
     }
     public void oneUp(){
-        abilites = "";
+        abilities = "";
         goal += 1;
     }
     public void sevenUp(){
-        abilites = "";
+        abilities = "";
         goal += 7;
     }
     public void sevenDown(){
-        abilites = "";
+        abilities = "";
         goal -=7;
     }
     public void oneDown(){
-        abilites = "";
+        abilities = "";
         goal -= 1;
     }
 
