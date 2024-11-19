@@ -5,14 +5,16 @@ public class tempGameRunner {
         Scanner s = new Scanner(System.in);
         tempGame user = new tempGame();
         tempGame computer = new tempGame();
+        // variables needed
         int computerInitial = computer.total;
-        boolean UserMove = true;
+        boolean userMove = true;
         boolean computerMove = true;
         int count = 0;
-        System.out.println("Your ability cards: " + user.abilities + "\n" + "Your number: " + user.deck+"\n"+"----------------------------------------------------");
-        System.out.println(computer.abilities + " " + computer.deck);
 
-        while (UserMove || computerMove) {
+        //teaches user how to play
+        System.out.println("Your ability cards: " + user.abilities + "\n" + "Your number: " + user.deck+"\n"+"----------------------------------------------------");
+        //
+        while (userMove || computerMove) {
             System.out.print("Choose between hit or stand or use your ability: ");
             String response = s.nextLine();
             if ((user.abilities.length()>1)&&(!response.equalsIgnoreCase("hit")&&!response.equalsIgnoreCase("stand"))){
@@ -33,7 +35,7 @@ public class tempGameRunner {
                 System.out.println(user.hit());
             } else if (response.equalsIgnoreCase("stand")){
                 System.out.println("Total: "+ user.total+"\n"+"----------------------------------------------------");
-                UserMove = false;
+                userMove = false;
             }
             if (computerMove && count != 0 && (count % 2 == 0) && computer.abilities.length() > 1){
                 System.out.println("Computer used: "+computer.abilities);
@@ -55,12 +57,13 @@ public class tempGameRunner {
                     System.out.println("Total: ? + " + temp + "\n" + "----------------------------------------------------");
                 }
             }
-            if (UserMove || computerMove){
-                UserMove = true;
+            // Allows the user or computer to choose if they want to hit or stand again by setting their move back to true only if one of their move is true
+            if (userMove || computerMove){
+                userMove = true;
                 computerMove = true;
             }
         }
-
+        //Reveals whether the user wins or loses
         System.out.println( user.determineWinner(user.total, computer.total,user.goal));
     }
 }
