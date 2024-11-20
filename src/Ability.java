@@ -1,4 +1,10 @@
+/**
+ * The ability class represents how the abilities section of the game. It contains all the current abilities in the game.
+ */
 public class Ability {
+    /**
+     * Constructor for the Ability class. Creates a new instance of Ability
+     */
     public Ability(){
     }
     /**
