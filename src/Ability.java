@@ -18,25 +18,25 @@ public class Ability {
         }
     }
     /**
-     * The oneUp method changes the abilities String to an empty string and increments goal by 1.
+     * The oneUp method returns 1.
      */
     public int oneUp(){
         return 1;
     }
     /**
-     * The oneUp method changes the abilities String to an empty string and increments goal by 7.
+     * The oneUp method returns 7.
      */
     public int sevenUp(){
         return 7;
     }
     /**
-     * The oneUp method changes the abilities String to an empty string and decrements goal by 7.
+     * The oneUp method returns -7.
      */
     public int sevenDown(){
         return -7;
     }
     /**
-     * The oneUp method changes the abilities String to an empty string and decrements goal by 1.
+     * The oneUp method returns -1.
      */
     public int oneDown(){
         return -1;

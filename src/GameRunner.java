@@ -63,8 +63,6 @@ public class GameRunner {
             }
         }
         //Reveals whether the user wins or loses
-        System.out.println(user.goal);
-        System.out.println(computer.goal);
         System.out.println( user.determineWinner(user.total, computer.total,user.goal) +"\n"+ "Your total: "+user.total +"\n"+ "Computer's total: "+ computer.total);
     }
 }

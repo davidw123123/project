@@ -62,11 +62,11 @@ public class Game{
             abilities = "";
             return "The goal is now " + goal+"\n"+"----------------------------------------------------";
         } else if (ability1.equalsIgnoreCase("oneDown")) {
-            goal -= ability.oneDown();
+            goal += ability.oneDown();
             abilities = "";
             return"The goal is now " + goal+"\n"+"----------------------------------------------------";
         } else {
-            goal -= ability.sevenDown();
+            goal += ability.sevenDown();
             abilities = "";
            return "The goal is now " + goal+"\n"+"----------------------------------------------------";
         }
