@@ -10,7 +10,6 @@ public class GameRunner {
         boolean userMove = true;
         boolean computerMove = true;
         int count = 0;
-        System.out.println(user);
         //teaches user how to play
         System.out.println("You start of with a card between 1-9 and your goal is to try to reach the goal of 21. You are able to hit to get a random card or stand to skip your turn."+"\n"+"If both players stand, the game will determine the winner based on who is closer to the goal. You have ability cards that could change the goal by a certain amount."+"\n"+"Your ability cards: " + user.abilities + "\n" + "Your number: " + user.deck+"\n"+"----------------------------------------------------");
         //
@@ -64,6 +63,8 @@ public class GameRunner {
             }
         }
         //Reveals whether the user wins or loses
-        System.out.println( user.determineWinner(user.total, computer.total,user.goal));
+        System.out.println(user.goal);
+        System.out.println(computer.goal);
+        System.out.println( user.determineWinner(user.total, computer.total,user.goal) +"\n"+ "Your total: "+user.total +"\n"+ "Computer's total: "+ computer.total);
     }
 }
