@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-public class tempGameRunner {
+public class GameRunner {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        tempGame user = new tempGame();
-        tempGame computer = new tempGame();
+        Game user = new Game();
+        Game computer = new Game();
         // variables needed
         int computerInitial = computer.total;
         boolean userMove = true;
         boolean computerMove = true;
         int count = 0;
-
+        System.out.println(user);
         //teaches user how to play
-        System.out.println("Your ability cards: " + user.abilities + "\n" + "Your number: " + user.deck+"\n"+"----------------------------------------------------");
+        System.out.println("You start of with a card between 1-9 and your goal is to try to reach the goal of 21. You are able to hit to get a random card or stand to skip your turn."+"\n"+"If both players stand, the game will determine the winner based on who is closer to the goal. You have ability cards that could change the goal by a certain amount."+"\n"+"Your ability cards: " + user.abilities + "\n" + "Your number: " + user.deck+"\n"+"----------------------------------------------------");
         //
         while (userMove || computerMove) {
             System.out.print("Choose between hit or stand or use your ability: ");
