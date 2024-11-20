@@ -45,8 +45,7 @@ public class GameRunner {
             }
             if (computerMove) {
                 if (((Math.abs(computer.total - computer.goal) < 5) || (Math.abs(computer.total - computer.goal) > computer.goal))) {
-                    System.out.println("Computer's Turn: Stand");
-                    System.out.println(computer.total + "\n" + "----------------------------------------------------");
+                    System.out.println("Computer's Turn: Stand"+"\n" + "----------------------------------------------------");
                     computerMove = false;
                     count++;
                 } else {
@@ -63,6 +62,6 @@ public class GameRunner {
             }
         }
         //Reveals whether the user wins or loses
-        System.out.println( user.determineWinner(user.total, computer.total,user.goal) +"\n"+ "Your total: "+user.total +"\n"+ "Computer's total: "+ computer.total);
+        System.out.println( user.determineWinner(user.total, computer.total,user.goal)+"Goal: "+user.goal +"\n"+ "Your total: "+user.total +"\n"+ "Computer's total: "+ computer.total);
     }
 }
