@@ -72,7 +72,20 @@ public class Game{
         }
     }
 
-
+    /**
+     * The abilityDescription method tells the user the description of the ability.
+     * @param ability represents the ability that the method is returning the description for.
+     * @return returns the ability of the given ability.
+     */
+    public String abilityDescription(String ability){
+        if (ability.equalsIgnoreCase("oneUp")){
+            return "- increases goal by 1";
+        } else if (ability.equalsIgnoreCase("oneDown")){
+            return "- decreases goal by 1";
+        } else if (ability.equalsIgnoreCase("sevenUp")){
+            return "- increases goal by 7";
+        } else return "- decreases goal by 7";
+    }
 
     /**
      * The changeGoal method changes the current goal to newGoal
